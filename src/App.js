@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import { useState } from 'react';
+import { useEffect } from 'react';
+
+import { Header } from './components/header/Header';
+import { HomePage } from './components/home/HomePage';
+import { Login } from './components/login/Login';
+import { Register } from './components/register/Register';
+import { Catalog } from './components/catalog/Catalog';
+import { Footer } from './components/footer/Footer';
+import { Search } from './components/search/Search';
+import { Details } from './components/details/Details';
+import { data } from './staticData';
 
 function App() {
+
+  const [lessons, setLessons] = useState(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="box">
+      <Header />
+
+      <main id="main-content" />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/catalog" element={<Catalog lessons={lessons} />} />
+        <Route path="/catalog/:lessonId" element={<Details lessons={lessons} />}></Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
