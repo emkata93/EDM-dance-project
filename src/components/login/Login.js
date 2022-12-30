@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
+import './Login.scss';
 export const Login = () => {
     return (
-        <section id="loginPage">
+        <motion.section id="loginPage"
+        initial = {{ opacity: 0, x: 100 }}
+        animate = {{  opacity: 1, x: 0 }}
+        exit = {{ opacity: 0, x: -100 }}
+        transition = {{duration: 0.5}}
+        >
+
             <form>
                 <fieldset>
                     <legend>Login</legend>
@@ -31,12 +38,12 @@ export const Login = () => {
                     </button>
                     <p className="field">
                         <span>
-                            If you don't have profile click <Link to="/register">here</Link>
+                            If you don't have profile click <Link to="/register">here</Link>.
                         </span>
                     </p>
                 </fieldset>
             </form>
-        </section>
+        </motion.section>
     )
 
 }

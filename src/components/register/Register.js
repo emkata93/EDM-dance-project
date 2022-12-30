@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 export const Register = () => {
 
 
@@ -19,7 +21,13 @@ export const Register = () => {
     }
 
     return (
-        <section id="registerPage">
+        <motion.section id="registerPage"
+        initial = {{ opacity: 0, x: 100 }}
+        animate = {{  opacity: 1, x: 0 }}
+        exit = {{ opacity: 0, x: -100 }}
+        transition = {{duration: 0.5}}
+        >
+
             <form onSubmit={submitHandler}>
                 <fieldset>
                     <legend>Register</legend>
@@ -66,12 +74,12 @@ export const Register = () => {
 
                     <p className="field">
                         <span>
-                            If you already have profile click <Link to="/login">here</Link>
+                            If you already have profile click <Link to="/login">here</Link>.
                         </span>
                     </p>
                 </fieldset>
             </form>
-        </section>
+        </motion.section>
     )
 
 }

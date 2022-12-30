@@ -1,30 +1,32 @@
 import { Link } from 'react-router-dom';
+import './Header.scss';
 
 export const Header = () => {
     return (
         <header>
-            <nav>
-                <img src="./images/dance.jpg" />
-                <Link to="/">Home</Link>
-                <ul>
+            <nav>  
+                
+                <div className='container blue circleBehind'>
+             
                     {/*All user*/}
-                    <li>
+                        <Link to="/">Home</Link>
+                        
                         <Link to="/catalog">Catalog</Link>
-                    </li>
-                    <li>
+                    
+                  
                         <Link to="/search">Search</Link>
-                    </li>
+                 
                     {/*Only guest*/}
-                    <li>
+                   
                         <Link to="/login">Login</Link>
-                    </li>
-                    <li>
+                    
+                    
                         <Link to="/register">Register</Link>
-                    </li>
-                    <li>
+                    
+                    
                         <Link to="/">Logout</Link>
-                    </li>
-                </ul>
+                        </div>
+                
             </nav>
         </header>)
 }

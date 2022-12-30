@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+fieldset {
+  margin: 1em auto;
+  padding: 2em;
+  width: 25em;
+  border-radius: 12px;
+  background-image: linear-gradient(315deg, #ee47ca 0%, #5f89e4 74%);
+  box-shadow: 0 2px 2px #131518;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+fieldset legend {
+  font-weight: 700;
+  font-size: 2em;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  background-image: linear-gradient(315deg, #ee47ca 0%, #5f89e4 74%);
+    color: rgb(255, 255, 255);
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px dotted rgb(238, 238, 243);
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+input, input + label > i {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid #384049;
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  color: rgb(3, 3, 3);
+  transition: all 0.3s ease;
+}
+
+input[type=text], input[type=password] {
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  margin: 0 0.5em 1em 0;
+}
+
+input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder {
+  color: #343b44;
+  line-height: 1.2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+  border-color: #4e5966;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+  border-color: #39a086;
+}
+
+.login, .register {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+  border-radius: 10px;
+	display: inline;
+	align-items: center;
+	justify-content: center;
+	background-color: #1b2845;
+	background-image: linear-gradient(315deg, #5f89e4 0%, #ee47ca 74%);
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 500ms;
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.login:hover{
+    scale: 1.2;
+    background-image: linear-gradient(315deg, #ee47ca 0%, #5f89e4 74%);
+}
+.register:hover {
+    scale: 1.2;
+    background-image: linear-gradient(315deg, #ee47ca 0%, #5f89e4 74%);
+}
+
+#loginPage, #registerPage {
+  font-family: "Lato";
+  font-size: 16px;
+  color: #080808;
+  padding: 1em 0 10em;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+p{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Nothing You Could Do', cursive;
+}

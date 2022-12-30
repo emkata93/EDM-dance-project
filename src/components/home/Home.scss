@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&display=swap');
+
+body {
+    background-image: url('./images/stylish-sportive-caucasian-couple-dancing-hiphop-colorful-gradient-background-dance-hall-neon-light.jpg');
+    background-size: cover;
+    background-image: fixed;
+    background-repeat: no-repeat;
+}
+#intro {
+  width: 35%;
+  height: 60%;
+  margin-left: 0;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  background-color: #0B0C10;
+  opacity: 0.8;
+  border-radius: 10px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1rem;
+  animation: move 3s ease;
+  animation-iteration-count:initial;
+}
+@keyframes move {
+  0% { transform: translatex( -1050px ) }
+  50% { transform: translatex( -50px ) }
+  100% { transform: translatex( -0px ) }
+}
+
+footer {
+    background-color: #0B0C10;
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    padding: 0 5px 0 3px;
+    margin: 0%;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    text-align: center;
+    color: #c5c6c7;
+    font-weight: bold;
+}
+
+
+#welcomePage {
+    color: #45a29e;
+    font-size: 24px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.stage-cube-cont {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 18%;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+  }
+  
+  .cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+  
+    div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background: rgba(255, 255, 255, 0.4);
+      text-align: center;
+      font-size: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px 0px lightyellow;
+    }
+  
+    .face1 {
+      transform: translateZ(100px);
+      color: #dd0031;
+      p{
+        font-size: 5rem;
+        font-family: 'Dancing Script', cursive;
+      }
+    }
+    .face2 {
+      transform: rotateY(90deg) translateZ(100px);
+      color: #f06529;
+      p{
+        font-size: 3rem;
+        font-family: 'Dancing Script', cursive;
+      }
+    }
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+      color: #28a4d9;
+      p{
+        font-size: 3.5rem;
+        font-family: 'Permanent Marker', cursive;
+      }
+    }
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+      color: #5ed4f4;
+      p{
+        font-size: 3.5rem;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 600;
+      }
+    }
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+      color: #efd81d;
+      p{
+        font-size: 4rem;
+        font-family: 'Dancing Script', cursive;
+      }
+    }
+    .face6 {
+      transform: rotateX(-90deg) translateZ(100px);
+      color: #ec4d28;
+      p{
+        font-size: 4rem;
+        font-family: 'Permanent Marker', cursive;
+      }
+    }
+  }
+  
+  @keyframes spincube {
+    from,
+    to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      transform: rotateY(-90deg);
+    }
+    33% {
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      transform: rotateX(90deg);
+    }
+  }
+  

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+#search-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#search-page > h1 {
+    font-size: 3rem;
+    color: whitesmoke;
+    font-family: 'Nothing You Could Do', cursive;
+    text-shadow: 5px 2px black;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-image: linear-gradient(315deg, #ee47ca 0%, #5f89e4 74%);
+    opacity: 0.8;
+    border-radius: 12px;
+    width: 60vw;
+}
+.button-list{
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+  border-radius: 10px;
+	display: inline;
+	align-items: center;
+	justify-content: center;
+	background-color: #1b2845;
+	background-image: linear-gradient(315deg, #5f89e4 0%, #ee47ca 74%);
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 500ms;
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 20px;
+}
+.button-list:hover{
+    scale: 1.2;
+    background-image: linear-gradient(315deg, #ee47ca 0%, #5f89e4 74%);
+}
