@@ -10,6 +10,8 @@ export const Register = () => {
     const [emailValidator, setEmailValidator] = useState(true);
     // const [passwordValidator, setPasswordValidator] = useState(true);
 
+    // need to be added pass validator
+
     const submitHandler = (e) => {
         e.preventDefault();
 
