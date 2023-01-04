@@ -1,6 +1,14 @@
+import { motion } from 'framer-motion';
+import './Search.scss'
+
 export const Search = () => {
     return (
-        <section id="searchPage">
+        <motion.section id="search-page"
+        initial = {{ opacity: 0, x: 100 }}
+        animate = {{  opacity: 1, x: 0 }}
+        exit = {{ opacity: 0, x: -100 }}
+        transition = {{duration: 0.5}}
+        >
             <h1>Search Lesson</h1>
             <div className="search">
                 <input
@@ -35,6 +43,6 @@ export const Search = () => {
             {/*If there are no matches*/}
             {/* <p className="no-result">No result.</p>
             </div> */}
-        </section>
+        </motion.section>
     )
 }

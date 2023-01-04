@@ -1,30 +1,35 @@
 import { Link } from 'react-router-dom';
+import './Header.scss';
+import { useContext } from 'react';
+
+import { AuthContext } from '../../context/AuthContext';
 
 export const Header = () => {
+    const { auth } = useContext(AuthContext);
+
     return (
         <header>
             <nav>
-                <img src="./images/dance.jpg" />
-                <Link to="/">Home</Link>
-                <ul>
-                    {/*All user*/}
-                    <li>
-                        <Link to="/catalog">Catalog</Link>
-                    </li>
-                    <li>
-                        <Link to="/search">Search</Link>
-                    </li>
-                    {/*Only guest*/}
-                    <li>
-                        <Link to="/login">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/register">Register</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Logout</Link>
-                    </li>
-                </ul>
+
+                <div className='container blue circleBehind'>
+
+                    {auth.userName && <span>Welcome,{auth.userName}</span>}
+                    {auth.userName
+                        ? <>
+                            <Link to="/">Home</Link>
+                            <Link to="/catalog">Catalog</Link>
+                            <Link to="/search">Search</Link>
+                            <Link to="/logout">Logout</Link>
+                        </>
+                        : <>
+                            <Link to="/">Home</Link>
+                            <Link to="/login">Login</Link>
+                            <Link to="/register">Register</Link>
+                        </>
+                    }
+
+                </div>
+
             </nav>
         </header>)
 }

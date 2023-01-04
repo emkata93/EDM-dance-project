@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import'./CatalogItems.scss';
 
 export const CatalogItem = ({
     lesson,
@@ -6,8 +7,8 @@ export const CatalogItem = ({
     return (
         <div className="card-box">
             <img src={lesson.img} />
-            <div>
-                <div className="text-center" >
+            <div className="text-center">
+                <div>
                     <p className="name">{lesson.name}</p>
                     <p className="teacher">{lesson.teacher}</p>
                     <p className="exp">{lesson.experience}</p>
