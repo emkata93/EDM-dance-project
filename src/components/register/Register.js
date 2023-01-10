@@ -8,7 +8,7 @@ export const Register = () => {
 
     const navigate = useNavigate();
     const [emailValidator, setEmailValidator] = useState(true);
-    // const [passwordValidator, setPasswordValidator] = useState(true);
+    const [passwordValidator, setPasswordValidator] = useState(true);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -19,17 +19,20 @@ export const Register = () => {
 
         email.split('').find(x => x == '@') ? setEmailValidator(true) : setEmailValidator(false);
 
-        // password == confirmPassword ? setPasswordValidator(true) : setPasswordValidator(false);
+        if (password == confirmPassword) {
+            fetch(`/api/UserActions/Register`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(navigate('/login'))
+        } else {
+            setPasswordValidator(false)
+        }
 
-        fetch(`/api/UserActions/Register`, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.text())
-            .then(navigate('/login'))
 
     }
 
@@ -75,7 +78,7 @@ export const Register = () => {
                         type="password"
                         placeholder="********"
                     />
-                    {/* {passwordValidator || <span style={{ color: "red" }}>Passwords don't match!</span>} */}
+                    {passwordValidator || <span style={{ color: "red" }}>Passwords don't match!</span>}
 
                     <label htmlFor="email" className="vhide">
                         Email
